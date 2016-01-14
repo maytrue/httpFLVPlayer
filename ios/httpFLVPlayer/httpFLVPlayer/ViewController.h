@@ -7,8 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "HTTPFLVPlayerController.h"
 
 @interface ViewController : UIViewController
+
+@property (nonatomic, retain) HTTPFLVPlayerController *playerController;
 
 
 @end

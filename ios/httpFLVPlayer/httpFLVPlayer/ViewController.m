@@ -17,6 +17,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    NSURL *url = [NSURL URLWithString:@"http://"];
+    
+    _playerController = [[HTTPFLVPlayerController alloc] initPlayerWithView:self.view playURL:url];
+    
 }
 
 - (void)didReceiveMemoryWarning {

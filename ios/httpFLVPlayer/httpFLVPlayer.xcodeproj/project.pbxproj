@@ -13,6 +13,8 @@
 		E73A97171C47501900A6287D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E73A97151C47501900A6287D /* Main.storyboard */; };
 		E73A97191C47501900A6287D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E73A97181C47501900A6287D /* Assets.xcassets */; };
 		E73A971C1C47501900A6287D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E73A971A1C47501900A6287D /* LaunchScreen.storyboard */; };
+		E753645A1C47D5B90020D45C /* HTTPFLVPlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = E75364591C47D5B90020D45C /* HTTPFLVPlayerController.m */; };
+		E753645D1C47DAB40020D45C /* HTTPStream.m in Sources */ = {isa = PBXBuildFile; fileRef = E753645C1C47DAB40020D45C /* HTTPStream.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,10 @@
 		E73A97181C47501900A6287D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E73A971B1C47501900A6287D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E73A971D1C47501900A6287D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E75364581C47D5B90020D45C /* HTTPFLVPlayerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPFLVPlayerController.h; sourceTree = "<group>"; };
+		E75364591C47D5B90020D45C /* HTTPFLVPlayerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTPFLVPlayerController.m; sourceTree = "<group>"; };
+		E753645B1C47DAB40020D45C /* HTTPStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPStream.h; sourceTree = "<group>"; };
+		E753645C1C47DAB40020D45C /* HTTPStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTPStream.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +64,9 @@
 		E73A970B1C47501900A6287D /* httpFLVPlayer */ = {
 			isa = PBXGroup;
 			children = (
+				E73A97231C4754C100A6287D /* display */,
+				E73A97241C4754C100A6287D /* demux */,
+				E73A97251C4754C100A6287D /* protocol */,
 				E73A970F1C47501900A6287D /* AppDelegate.h */,
 				E73A97101C47501900A6287D /* AppDelegate.m */,
 				E73A97121C47501900A6287D /* ViewController.h */,
@@ -67,6 +76,8 @@
 				E73A971A1C47501900A6287D /* LaunchScreen.storyboard */,
 				E73A971D1C47501900A6287D /* Info.plist */,
 				E73A970C1C47501900A6287D /* Supporting Files */,
+				E75364581C47D5B90020D45C /* HTTPFLVPlayerController.h */,
+				E75364591C47D5B90020D45C /* HTTPFLVPlayerController.m */,
 			);
 			path = httpFLVPlayer;
 			sourceTree = "<group>";
@@ -77,6 +88,29 @@
 				E73A970D1C47501900A6287D /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E73A97231C4754C100A6287D /* display */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = display;
+			sourceTree = "<group>";
+		};
+		E73A97241C4754C100A6287D /* demux */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = demux;
+			sourceTree = "<group>";
+		};
+		E73A97251C4754C100A6287D /* protocol */ = {
+			isa = PBXGroup;
+			children = (
+				E753645B1C47DAB40020D45C /* HTTPStream.h */,
+				E753645C1C47DAB40020D45C /* HTTPStream.m */,
+			);
+			path = protocol;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,7 +183,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E753645D1C47DAB40020D45C /* HTTPStream.m in Sources */,
 				E73A97141C47501900A6287D /* ViewController.m in Sources */,
+				E753645A1C47D5B90020D45C /* HTTPFLVPlayerController.m in Sources */,
 				E73A97111C47501900A6287D /* AppDelegate.m in Sources */,
 				E73A970E1C47501900A6287D /* main.m in Sources */,
 			);
@@ -262,6 +298,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = httpFLVPlayer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = happyiterating.httpFLVPlayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -273,6 +310,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = httpFLVPlayer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = happyiterating.httpFLVPlayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -298,6 +336,7 @@
 				E73A97221C47501900A6287D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
